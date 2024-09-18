@@ -79,20 +79,19 @@ function App() {
     setNewLearner({
       name: "",
       bio: "",
+      scores:[]
     });
   };
 
 
   return (
-    <>
+   
     <div className="container">
       <h1>Learners</h1>
       {learnerData.learners.map((learner, index) => (
         <Learner
           key={index}
-          name={learner.name}
-          bio={learner.bio}
-          scores={learner.scores}
+          learners={learner}
         />
       ))}
 
@@ -123,7 +122,7 @@ function App() {
         <input className="button" type="submit" value="Add"/>
       </form>
       </div>
-    </>
+  
   );
 }
 
